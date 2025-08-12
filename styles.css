@@ -17,12 +17,13 @@
     --bg_alpha: rgba(30, 30, 46, 0.85);
 	--hourlyweather_bg:rgba(21, 93, 199, 0.85);
 	--hover: rgba(255, 255, 255, 0.05);
+	--font: 'Ubuntu Cond Nerd Font';
 }
 
 /* MAIN */
 
 *{
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text);
     font-weight: 600;
     font-family: "JetBrainsMono NFP";
@@ -41,7 +42,7 @@
     border: 1px solid rgba(128, 128, 128, 0);
 }
 .widget .icon {
-    font-size: 18px;
+    font-size: 13px;
 }
 .widget .label {
     color: var(--text);
@@ -62,9 +63,9 @@
 }
 .home-menu .menu-item {
     padding: 6px 48px 7px 16px;
-    font-size: 14px;
-    font-family: Bahnschrift;
-    font-weight: 600;
+    font-size: 11px;
+    font-family: var(--font);
+    /*font-weight: 600;*/
 }
 .home-menu .menu-item:hover {
     background-color: var(--hover);
@@ -84,11 +85,12 @@
 }
 .weather-widget .icon {
     color: var(--accent);
+	font-size: 14px;
     padding: 6px;
 }
 .weather-widget .label {
-    font-size: 13px;
-    font-family: Bahnschrift;
+    font-size: 11px;
+    font-family: var(--font);
 	color: var(--accent);
 
 }
@@ -104,18 +106,18 @@
     background-color:  var(--menu_bg2);
 }
 .weather-card-today .label {
-    font-size: 14px;
-	font-family: 'Bahnschrift';
+    font-size: 13px;
+	font-family: var(--font);
 }
 .weather-card-today .label.location {
-	font-family: 'Bahnschrift';
-    font-size: 24px;
+	font-family: var(--font);
+    font-size: 22px;
     font-weight: 600;
 	color: var(--accent);
 }
 .weather-card-today .label.alert {
-	font-family: 'Bahnschrift';
-    font-size: 12px;
+	font-family: var(--font);
+    font-size: 11px;
     font-weight: 600;
     background-color: var(--menu_bg2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -137,8 +139,8 @@
 	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .weather-card-day .label {
-    font-size: 14px;
-	font-family: 'Bahnschrift';
+    font-size: 13px;
+	font-family: var(--font);
 }
 .weather-card .hourly-container {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -147,18 +149,18 @@
     min-height: 150px;
 }
 .weather-card .hourly-data {
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
     /* color: cyan;*/ /* <- Font color */
     background-color: #FAE93F; /* <- Curve color */
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 }
 
 /* ACTIVE WINDOW */
 
 .active-window-widget .label {
-    font-size: 13px;
-    font-family: 'Bahnschrift';
+    font-size: 11px;
+    font-family: var(--font);
 }
 .active-window-widget .icon {
     padding-right: 6px;
@@ -168,8 +170,8 @@
 /*CLOCK WIDGET*/
 
 .clock-widget .label {
-    font-size: 13px;
-    font-family: Bahnschrift;
+    font-size: 11px;
+    font-family: var(--font);
 }
 
 /*CALENDAR DROPDOWN*/
@@ -184,8 +186,8 @@
 .calendar .calendar-table,
 .calendar .calendar-table::item {
     color: var(--subtext);
-    font-family: 'Bahnschrift';
-	font-size: 14px;
+    font-family: var(--font);
+	font-size: 12px;
     margin: 0;
     padding: 0;
     border: none;
@@ -201,8 +203,8 @@
 .calendar .day-label,
 .calendar .month-label,
 .calendar .date-label {
-    font-family: 'Bahnschrift';
-    font-size: 16px;
+    font-family: var(--font);
+    font-size: 14px;
     color: #fff;
     font-weight: 700;
     min-width: 180px;
@@ -212,7 +214,7 @@
     font-weight: normal;
 }
 .calendar .date-label {
-    font-size: 88px;
+    font-size: 80px;
     font-weight: 900;
     color: rgb(255, 255, 255);
     margin-top: -5px;
@@ -220,8 +222,8 @@
 }
 .calendar .week-label,
 .calendar .holiday-label {
-    font-family: 'Bahnschrift';
-    font-size: 14px;
+    font-family: var(--font);
+    font-size: 12px;
     color: var(--media);
     font-weight: 700;
     min-width: 180px;
@@ -268,10 +270,10 @@
     border-radius: 4px;
 }
 .disk-group-label {
-    font-size: 13px;
+    font-size: 11px;
 }
 .disk-group-label-size {
-    font-size: 12px;
+    font-size: 11px;
     color: rgba(205, 214, 244, 0.5);
 }
 
@@ -282,17 +284,18 @@
     padding: 0;
 }
 .volume-widget .icon {
-    padding: 0 6px;
+    padding: 0 5px;
+	padding-top: 2px;
     color: white;
 	font-size: 13px;
 }
 .volume-widget .label {
-    font-size: 13px;
-    font-family: Bahnschrift;
+    font-size: 11px;
+    font-family: var(--font);
 }
 
 .microphone-widget .icon {
-    padding: 0 0px;
+	padding-top: 2px;
     color: white;
 	font-size: 13px;
 }
@@ -306,12 +309,12 @@
 	background-color: var(--menu_bg);
 }	
 .audio-container .device {
-    font-family: Bahnschrift;
+    font-family: var(--font);
     background-color: transparent;
     border: none;
     padding:6px 8px 6px 4px;
     margin: 2px 0;
-    font-size: 13px;
+    font-size: 11px;
     border-radius: 4px;
 }
 .audio-container .device.selected {
@@ -339,7 +342,7 @@
 	margin-bottom: 10px;
 	color: var(--accent);
 	font-weight: 600;
-	font-family: "Bahnschrift";
+	font-family: "var(--font)";
 }
 .power-menu-popup .button {
 	padding: 0;
@@ -347,7 +350,7 @@
 	height: 240px;
 	border-radius: 6px;
 	background-color: var(--bg_alpha);
-	font-family: "Bahnschrift";
+	font-family: "var(--font)";
 	color: white;
 	border: 4px solid rgba(255, 255, 255, 0);
 }
@@ -360,7 +363,7 @@
 	font-size: 16px;
 	font-weight: 600;
 	color: rgba(255, 255, 255, 0.6);
-	font-family: "Bahnschrift";
+	font-family: "var(--font)";
 }
 .power-menu-popup .button .icon {
 	font-size: 64px;
@@ -382,8 +385,8 @@
 	color: var(--accent);
 }
 .notification-widget .label {
-	/*font-size: 12px;
-	font-family: "Bahnschrift";*/
+	/*font-size: 11px;
+	font-family: "var(--font)";*/
 	color: var(--text);
 	background-color: var(--red);
 	border-radius: 6px;
@@ -392,6 +395,8 @@
 	font-weight: 800;
 	margin: 5px 0 8px 0;
 	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* MEDIA */
@@ -407,8 +412,8 @@
     border-radius: 0;
 }
 .media-widget .label {
-    font-family: Bahnschrift;
-    font-size: 13px;
+    font-family: var(--font);
+    font-size: 11px;
     padding: 0 0px;
 	color: var(--media);
     font-weight: bold;
@@ -448,7 +453,7 @@
     background-color: var(--menu_bg);
 }
 .media-menu .source {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     margin-left: 10px;
     color: #000;
@@ -457,15 +462,15 @@
     padding: 2px 4px;
 }
 .media-menu .title{
-	font-family: Bahnschrift;
+	font-family: var(--font);
 	margin-left: 10px;
-	font-size: 16px;
+	font-size: 14px;
     font-weight: bold;
 	
 }
 .media-menu .artist {
-	font-family: Bahnschrift;
-    font-size: 13px;
+	font-family: var(--font);
+    font-size: 11px;
 	font-weight: 600;
     color: var(--media);
     margin-top: 0px;
@@ -500,8 +505,8 @@
     /*background-color: rgba(0, 0, 0, 0);*/
 }
 .media-menu .playback-time {
-	font-family: Bahnschrift;
-    font-size: 16px;
+	font-family: var(--font);
+    font-size: 13px;
     color: var(--subtext1);
     margin-top: 20px;
     min-width: 100px;
@@ -547,19 +552,19 @@
     border-top-left-radius: 0;
 }
 .memory-widget .label {
-	font-family: Bahnschrift;
+	font-family: var(--font);
     min-width: 30px;
     max-width: 80px;
 	color: var(--text);
-	font-size: 13px;
+	font-size: 11px;
 	padding: 0;
 }
 .cpu-widget .label {
-	font-family: Bahnschrift;
+	font-family: var(--font);
     min-width: 30px;
     max-width: 80px;
 	color: var(--text);
-	font-size: 13px;
+	font-size: 11px;
 	padding: 0;
 }
 .cpu-widget .icon {
@@ -598,9 +603,9 @@
 .update-check-widget .widget-container.windows .label {
     margin: 0 6px 0 1px;
     color: var(--text);
-	font-family: 'Segoe UI';
+	font-family: var(--font);
     font-weight: 700;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 /* TRAFFIC */
@@ -612,8 +617,8 @@
 	font-size: 13px;
 }
 .traffic-widget .label {
-	font-family: 'Bahnschrift';
-	font-size: 13px;
+	font-family: var(--font);
+	font-size: 11px;
 	text-align: left;
 	float: left;
 	color: var(--traffic);
@@ -633,16 +638,16 @@
 }
 .traffic-menu .header .title {
     padding: 8px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    font-family: 'Bahnschrift';
-    color: var(--traffic);
+    font-family: var(--font);
+    color: var(--accent);
 }
 .traffic-menu .header .reset-button {
-    font-size: 13px;
+    font-size: 11px;
     padding: 4px 8px;
     margin-right: 8px;
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
     border-radius: 4px;
     font-weight: 600;
     background-color: transparent;
@@ -683,15 +688,15 @@
 }
 .traffic-menu .upload-speed-value,
 .traffic-menu .download-speed-value {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 900;
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
     color: #bcc2c5;
 }
 .traffic-menu .upload-speed-unit,
 .traffic-menu .download-speed-unit {
-    font-size: 13px;
-    font-family: 'Bahnschrift';
+    font-size: 11px;
+    font-family: var(--font);
     font-weight: 600;
     padding-top: 4px;
 }
@@ -699,15 +704,15 @@
 .traffic-menu .download-speed-placeholder {
     color: #747474;
     font-size: 11px;
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
     padding: 0 0 4px 0;
 }
 .traffic-menu .section-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--subtext1);
     margin-bottom: 4px;
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
 }
 .traffic-menu .session-section,
 .traffic-menu .today-section,
@@ -718,15 +723,15 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .traffic-menu .data-text {
-    font-size: 13px;
+    font-size: 11px;
     color: var(--subtext2);
     padding: 2px 0;
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
 }
 .traffic-menu .data-value {
     font-weight: 600;
-    font-size: 13px;
-    font-family: 'Bahnschrift';
+    font-size: 11px;
+    font-family: var(--font);
     padding: 2px 0;
 }
 
@@ -734,10 +739,10 @@
 
 .traffic-menu .interface-info,
 .traffic-menu .internet-info {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--subtext2);
     padding: 8px 0;
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
 }
 .traffic-menu .internet-info {
     background-color: var(--menu_bg2);
@@ -754,7 +759,7 @@
 /* NETWORK */
 
 .wifi-widget .icon{
-	font-size: 16px;
+	font-size: 13px;
 	font-weight: bold;
 	font-align: right;
 	color: var(--text);
@@ -762,7 +767,7 @@
 
 
 .wifi-widget .label{
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: bold;
 	font-align: right;
 	color: var(--text);
@@ -771,7 +776,7 @@
 /* NETWORK DROPDOWN */
 
 .wifi-menu {
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
     background-color: rgba(17, 17, 27, 0.4);
     max-height: 350px;
     min-height: 375px;
@@ -784,8 +789,8 @@
     background-color: #4cc2ff;
 }
 .wifi-menu .header {
-    font-family: 'Bahnschrift';
-    font-size: 13px;
+    font-family: var(--font);
+    font-size: 12px;
     font-weight: 600;
     margin-bottom: 2px;
     padding: 12px;
@@ -794,8 +799,8 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .wifi-menu .error-message {
-    font-family: 'Bahnschrift';
-    font-size: 13px;
+    font-family: var(--font);
+    font-size: 12px;
     font-weight: 600;
     margin-bottom: 2px;
     padding: 12px;
@@ -819,7 +824,7 @@
 }
 .wifi-menu .wifi-item[active=true] {
     background-color: rgba(255, 255, 255, 0.15);
-    font-size: 13px;
+    font-size: 11px;
     border-radius: 4px;
     min-height: 80px;
 }
@@ -829,22 +834,22 @@
     margin-right: 10px;
 }
 .wifi-menu .wifi-item .name {
-    font-family: 'Bahnschrift';
-    font-size: 13px;
+    font-family: var(--font);
+    font-size: 11px;
     margin-right: 10px;
 }
 .wifi-menu .wifi-item .password {
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
     background-color: transparent;
-    font-size: 13px;
+    font-size: 11px;
 }
 .wifi-menu .wifi-item .status {
-    font-family: 'Bahnschrift';
-    font-size: 13px;
+    font-family: var(--font);
+    font-size: 11px;
 }
 .wifi-menu .wifi-item .strength {
-    font-family: 'Bahnschrift';
-    font-size: 13px;
+    font-family: var(--font);
+    font-size: 11px;
 }
 .wifi-menu .wifi-item .controls-container {
     padding-top: 8px;
@@ -854,7 +859,7 @@
     padding: 4px 30px;
     border-radius: 4px;
     border: none;
-    font-size: 13px;
+    font-size: 11px;
 }
 .wifi-menu .wifi-item .connect:hover {
     background-color: var(--hover);
@@ -864,7 +869,7 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 .wifi-menu .footer {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 12px;
     margin-top: 2px;
@@ -873,7 +878,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .wifi-menu .footer .settings-button {
-    font-family: 'Bahnschrift';
+    font-family: var(--font);
     background-color: transparent;
     border: none;
     padding: 0 2px;

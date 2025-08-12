@@ -601,11 +601,18 @@
 }
 .update-check-widget .widget-container.winget .label,
 .update-check-widget .widget-container.windows .label {
-    margin: 0 6px 0 1px;
-    color: var(--text);
-	font-family: var(--font);
-    font-weight: 700;
-    font-size: 11px;
+	/*font-size: 11px;
+	font-family: "var(--font)";*/
+	color: var(--text);
+	background-color: var(--red);
+	border-radius: 6px;
+    padding: 1px 4px;
+    font: 8px Verdana;
+	font-weight: 800;
+	margin: 5px 0 8px 0;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* TRAFFIC */

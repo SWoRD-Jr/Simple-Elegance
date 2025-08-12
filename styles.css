@@ -382,13 +382,16 @@
 	color: var(--accent);
 }
 .notification-widget .label {
-	font-size: 12px;
-	font-family: "Bahnschrift";
+	/*font-size: 12px;
+	font-family: "Bahnschrift";*/
 	color: var(--text);
 	background-color: var(--red);
-	padding: 3px 3px 4px 2px;
-	border-radius: 7px;
-	margin: 4px 0 8px 0;
+	border-radius: 6px;
+    padding: 1px 4px;
+    font: 8px Verdana;
+	font-weight: 800;
+	margin: 5px 0 8px 0;
+	position: absolute;
 }
 
 /* MEDIA */

@@ -55,6 +55,7 @@
 }
 .home-widget .icon {
     color: var(--text);
+	font-size: 15px;
 }
 .home-widget .icon:hover {
     color: var(--accent);

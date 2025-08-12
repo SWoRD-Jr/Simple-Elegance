@@ -381,6 +381,15 @@
 	font-size: 13px;
 	color: var(--accent);
 }
+.notification-widget .label {
+	font-size: 12px;
+	font-family: "Bahnschrift";
+	color: var(--text);
+	background-color: var(--red);
+	padding: 3px 3px 4px 2px;
+	border-radius: 7px;
+	margin: 4px 0 8px 0;
+}
 
 /* MEDIA */
 .media-widget .widget-container

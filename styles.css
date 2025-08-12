@@ -17,7 +17,7 @@
     --bg_alpha: rgba(30, 30, 46, 0.85);
 	--hourlyweather_bg:rgba(21, 93, 199, 0.85);
 	--hover: rgba(255, 255, 255, 0.05);
-	--font: 'Ubuntu Cond Nerd Font';
+	--font: 'Ubuntu';
 }
 
 /* MAIN */
@@ -52,6 +52,12 @@
 
 .home-widget {
     padding-bottom: 1px;
+}
+.home-widget .icon {
+    color: var(--text);
+}
+.home-widget .icon:hover {
+    color: var(--accent);
 }
 
 /* HOME DROPDOWN */

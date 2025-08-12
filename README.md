@@ -1,5 +1,5 @@
 # Simple-Elegance
-A [YASB][YASB] theme that looks clean and is easy to configure.
+A [YASB](https://github.com/amnweb/yasb) theme that looks clean and is easy to configure.
 
 ![Simple-Elegance](https://i.imgur.com/Y5F2PCp.png "Theme Screenshot")
 

@@ -1,4 +1,4 @@
-/* COLOR VARIABLES */
+/* THEME FONT & COLOR VARIABLES */
 :root {
     --accent: #fcf75e; /*Weather, Calendar, Notifications & Updates Icons*/
 	--menu_bg: rgba(30, 30, 46, 0.6);
@@ -17,16 +17,17 @@
     --bg_alpha: rgba(30, 30, 46, 0.85);
 	--hourlyweather_bg:rgba(21, 93, 199, 0.85);
 	--hover: rgba(255, 255, 255, 0.05);
-	--font: 'Ubuntu';
+	--font: 'Roboto';
+	--font-size: 12px; /* Applies to most of the theme */
 }
 
 /* MAIN */
 
 *{
-    font-size: 11px;
+    font-size: var(--font-size);
     color: var(--text);
-    font-weight: 600;
-    font-family: "JetBrainsMono NFP";
+    font-weight: bold;
+    font-family: "JetBrainsMono NFP"; /* Needed for icons */
     margin: 0;
     padding: 0;
 }
@@ -70,9 +71,8 @@
 }
 .home-menu .menu-item {
     padding: 6px 48px 7px 16px;
-    font-size: 11px;
+    font-size: var(--font-size);
     font-family: var(--font);
-    /*font-weight: 600;*/
 }
 .home-menu .menu-item:hover {
     background-color: var(--hover);
@@ -96,10 +96,9 @@
     padding: 6px;
 }
 .weather-widget .label {
-    font-size: 11px;
+    font-size: var(--font-size);
     font-family: var(--font);
 	color: var(--accent);
-
 }
 
 /* WEATHER DROPDOWN */
@@ -119,13 +118,11 @@
 .weather-card-today .label.location {
 	font-family: var(--font);
     font-size: 22px;
-    font-weight: 600;
 	color: var(--accent);
 }
 .weather-card-today .label.alert {
 	font-family: var(--font);
-    font-size: 11px;
-    font-weight: 600;
+    font-size: var(--font-size);
     background-color: var(--menu_bg2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     color: rgba(196, 181, 162, 0.85);
@@ -157,16 +154,14 @@
 }
 .weather-card .hourly-data {
     font-family: var(--font);
-    /* color: cyan;*/ /* <- Font color */
-    background-color: #FAE93F; /* <- Curve color */
+    background-color: #FAE93F; /* Curve color */
     font-size: 12px;
-    font-weight: bold;
 }
 
 /* ACTIVE WINDOW */
 
 .active-window-widget .label {
-    font-size: 11px;
+    font-size: var(--font-size);
     font-family: var(--font);
 }
 .active-window-widget .icon {
@@ -177,7 +172,7 @@
 /*CLOCK WIDGET*/
 
 .clock-widget .label {
-    font-size: 11px;
+    font-size: var(--font-size);
     font-family: var(--font);
 }
 
@@ -194,7 +189,7 @@
 .calendar .calendar-table::item {
     color: var(--subtext);
     font-family: var(--font);
-	font-size: 12px;
+	font-size: var(--font-size);
     margin: 0;
     padding: 0;
     border: none;
@@ -213,12 +208,12 @@
     font-family: var(--font);
     font-size: 14px;
     color: #fff;
-    font-weight: 700;
+    font-weight: 600;
     min-width: 180px;
     max-width: 180px;
 }
 .calendar .month-label {
-    font-weight: normal;
+    font-weight: 700;
 }
 .calendar .date-label {
     font-size: 80px;
@@ -277,10 +272,10 @@
     border-radius: 4px;
 }
 .disk-group-label {
-    font-size: 11px;
+    font-size: var(--font-size);
 }
 .disk-group-label-size {
-    font-size: 11px;
+    font-size: var(--font-size);
     color: rgba(205, 214, 244, 0.5);
 }
 
@@ -297,7 +292,7 @@
 	font-size: 13px;
 }
 .volume-widget .label {
-    font-size: 11px;
+    font-size: var(--font-size);
     font-family: var(--font);
 }
 
@@ -321,7 +316,7 @@
     border: none;
     padding:6px 8px 6px 4px;
     margin: 2px 0;
-    font-size: 11px;
+    font-size: var(--font-size);
     border-radius: 4px;
 }
 .audio-container .device.selected {
@@ -349,7 +344,7 @@
 	margin-bottom: 10px;
 	color: var(--accent);
 	font-weight: 600;
-	font-family: "var(--font)";
+	font-family: var(--font);
 }
 .power-menu-popup .button {
 	padding: 0;
@@ -357,7 +352,7 @@
 	height: 240px;
 	border-radius: 6px;
 	background-color: var(--bg_alpha);
-	font-family: "var(--font)";
+	font-family: var(--font);
 	color: white;
 	border: 4px solid rgba(255, 255, 255, 0);
 }
@@ -370,7 +365,7 @@
 	font-size: 16px;
 	font-weight: 600;
 	color: rgba(255, 255, 255, 0.6);
-	font-family: "var(--font)";
+	font-family: var(--font);
 }
 .power-menu-popup .button .icon {
 	font-size: 64px;
@@ -392,8 +387,6 @@
 	color: var(--accent);
 }
 .notification-widget .label {
-	/*font-size: 11px;
-	font-family: "var(--font)";*/
 	color: var(--text);
 	background-color: var(--red);
 	border-radius: 6px;
@@ -420,14 +413,11 @@
 }
 .media-widget .label {
     font-family: var(--font);
-    font-size: 11px;
+    font-size: var(--font-size);
     padding: 0 0px;
 	color: var(--media);
-    font-weight: bold;
     padding: 0px;
     padding-left: 12px;
-    /*max-width: 170px;
-    min-width: 170px;*/
 }
 .media-widget .btn {
     color: var(--media);
@@ -461,7 +451,6 @@
 }
 .media-menu .source {
     font-size: 12px;
-    font-weight: 600;
     margin-left: 10px;
     color: #000;
     border-radius: 3px;
@@ -472,13 +461,10 @@
 	font-family: var(--font);
 	margin-left: 10px;
 	font-size: 14px;
-    font-weight: bold;
-	
 }
 .media-menu .artist {
 	font-family: var(--font);
-    font-size: 11px;
-	font-weight: 600;
+    font-size: var(--font-size);
     color: var(--media);
     margin-top: 0px;
     margin-bottom: 8px;
@@ -499,17 +485,13 @@
 }
 .media-menu .btn:hover {
     color: var(--media);
-    /*background-color: rgba(255, 255, 255, 0.1);*/
 }
 .media-menu .btn.play {
-    /*background-color: var(--menu_bg2);*/
     font-size: 24px;
-	/*padding-left: 4px;*/
 }
 .media-menu .btn.disabled:hover,
 .media-menu .btn.disabled {
     color: var(--subtext2);
-    /*background-color: rgba(0, 0, 0, 0);*/
 }
 .media-menu .playback-time {
 	font-family: var(--font);
@@ -563,7 +545,7 @@
     min-width: 30px;
     max-width: 80px;
 	color: var(--text);
-	font-size: 11px;
+	font-size: var(--font-size);
 	padding: 0;
 }
 .cpu-widget .label {
@@ -571,7 +553,7 @@
     min-width: 30px;
     max-width: 80px;
 	color: var(--text);
-	font-size: 11px;
+	font-size: var(--font-size);
 	padding: 0;
 }
 .cpu-widget .icon {
@@ -608,8 +590,6 @@
 }
 .update-check-widget .widget-container.winget .label,
 .update-check-widget .widget-container.windows .label {
-	/*font-size: 11px;
-	font-family: "var(--font)";*/
 	color: var(--text);
 	background-color: var(--red);
 	border-radius: 6px;
@@ -632,12 +612,12 @@
 }
 .traffic-widget .label {
 	font-family: var(--font);
-	font-size: 11px;
-	text-align: left;
-	float: left;
+	font-size: var(--font-size);
+	text-align: right;
+	float: right;
 	color: var(--traffic);
 	min-width: 100px;
-	max-width: 160px;
+	max-width: 190px;
 }
 
 /* TRAFFIC DROPDOWN */
@@ -658,12 +638,11 @@
     color: var(--accent);
 }
 .traffic-menu .header .reset-button {
-    font-size: 11px;
+    font-size: var(--font-size);
     padding: 4px 8px;
     margin-right: 8px;
     font-family: var(--font);
     border-radius: 4px;
-    font-weight: 600;
     background-color: transparent;
     border: none;
 }
@@ -709,15 +688,14 @@
 }
 .traffic-menu .upload-speed-unit,
 .traffic-menu .download-speed-unit {
-    font-size: 11px;
+    font-size: var(--font-size);
     font-family: var(--font);
-    font-weight: 600;
     padding-top: 4px;
 }
 .traffic-menu .upload-speed-placeholder,
 .traffic-menu .download-speed-placeholder {
     color: #747474;
-    font-size: 11px;
+    font-size: var(--font-size);
     font-family: var(--font);
     padding: 0 0 4px 0;
 }
@@ -737,14 +715,13 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .traffic-menu .data-text {
-    font-size: 11px;
+    font-size: var(--font-size);
     color: var(--subtext2);
     padding: 2px 0;
     font-family: var(--font);
 }
 .traffic-menu .data-value {
-    font-weight: 600;
-    font-size: 11px;
+    font-size: var(--font-size);
     font-family: var(--font);
     padding: 2px 0;
 }
@@ -774,15 +751,11 @@
 
 .wifi-widget .icon{
 	font-size: 13px;
-	font-weight: bold;
 	font-align: right;
 	color: var(--text);
 }
-
-
 .wifi-widget .label{
 	font-size: 15px;
-	font-weight: bold;
 	font-align: right;
 	color: var(--text);
 }
@@ -838,7 +811,7 @@
 }
 .wifi-menu .wifi-item[active=true] {
     background-color: rgba(255, 255, 255, 0.15);
-    font-size: 11px;
+    font-size: var(--font-size);
     border-radius: 4px;
     min-height: 80px;
 }
@@ -849,21 +822,21 @@
 }
 .wifi-menu .wifi-item .name {
     font-family: var(--font);
-    font-size: 11px;
+    font-size: var(--font-size);
     margin-right: 10px;
 }
 .wifi-menu .wifi-item .password {
     font-family: var(--font);
     background-color: transparent;
-    font-size: 11px;
+    font-size: var(--font-size);
 }
 .wifi-menu .wifi-item .status {
     font-family: var(--font);
-    font-size: 11px;
+    font-size: var(--font-size);
 }
 .wifi-menu .wifi-item .strength {
     font-family: var(--font);
-    font-size: 11px;
+    font-size: var(--font-size);
 }
 .wifi-menu .wifi-item .controls-container {
     padding-top: 8px;
@@ -873,7 +846,7 @@
     padding: 4px 30px;
     border-radius: 4px;
     border: none;
-    font-size: 11px;
+    font-size: var(--font-size);
 }
 .wifi-menu .wifi-item .connect:hover {
     background-color: var(--hover);
@@ -883,7 +856,7 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 .wifi-menu .footer {
-    font-size: 11px;
+    font-size: var(--font-size);
     font-weight: 600;
     padding: 12px;
     margin-top: 2px;
@@ -930,5 +903,4 @@
     background-color: var(--bg_alpha);
     margin: 1px 0 2px 0;
     border-radius: 4px;
-    /*border: 1px solid black;*/
 }

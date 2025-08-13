@@ -308,7 +308,7 @@ widgets:
       audio_menu:
         blur: True
         round_corners: True
-        round_corners_type: "normal"
+        round_corners_type: "small"
         border_color: "System"
         alignment: "right"
         direction: "down"

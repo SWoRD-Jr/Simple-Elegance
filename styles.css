@@ -2,7 +2,7 @@
 :root {
     --accent: #fcf75e; /*Weather, Calendar, Notifications & Updates Icons*/
 	--menu_bg: rgba(30, 30, 46, 0.6);
-	--menu_bg2: rgba(30, 30, 46, 0.2);
+	--menu_bg2: rgba(30, 30, 46, 0.4);
     --update: #673147;
 	--update_border: #74c7ec;
     --red: #FF534D; /*Power Button, Net Disconnect*/
@@ -56,7 +56,7 @@
 }
 .home-widget .icon {
     color: var(--text);
-	font-size: 15px;
+	font-size: 18px;
 }
 .home-widget .icon:hover {
     color: var(--accent);
@@ -287,7 +287,6 @@
 }
 .volume-widget .icon {
     padding: 0 5px;
-	padding-top: 2px;
     color: white;
 	font-size: 13px;
 }
@@ -297,9 +296,8 @@
 }
 
 .microphone-widget .icon {
-	padding-top: 2px;
     color: white;
-	font-size: 13px;
+	font-size: 12px;
 }
 
 /* AUDIO & MIC DROPDOWN */
@@ -481,7 +479,7 @@
     border-radius: 20px;
 }
 .media-menu .btn.prev {
-    margin-left: 10px;
+    margin-left: 50px;
 }
 .media-menu .btn:hover {
     color: var(--media);
@@ -901,6 +899,6 @@
 
 .sysinfo-grouped-widgets .container {
     background-color: var(--bg_alpha);
-    margin: 1px 0 2px 0;
+    margin: 2px 0 2px 0;
     border-radius: 4px;
 }

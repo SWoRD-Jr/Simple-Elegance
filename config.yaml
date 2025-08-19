@@ -44,6 +44,7 @@ bars:
         [
           "traffic",
           "sysinfo_widgets",
+          "github",
           "wifi",
           "volume",
           "microphone",
@@ -129,7 +130,7 @@ widgets:
        on_middle: "do_nothing"
        on_right: "toggle_label"
       max_field_size:
-        label: 55
+        label: 40
         label_alt: 80
       show_thumbnail: true
       controls_only: false
@@ -185,7 +186,7 @@ widgets:
       label_no_window: ""
       label_icon: true
       label_icon_size: 14
-      max_length: 50
+      max_length: 40
       max_length_ellipsis: "..."
       monitor_exclusive: true
   clock:
@@ -328,7 +329,7 @@ widgets:
       winget_update:
         enabled: true
         label: "<span>\uf0ab</span>{count}"
-        interval: 360
+        interval: 60
         exclude: [Discord]
       windows_update:
         enabled: false
@@ -427,3 +428,30 @@ widgets:
         left: 2
         bottom: 0
         right: 2
+  github:
+    type: "yasb.github.GithubWidget"
+    options:
+      label: "<span>\ueba1</span>"
+      label_alt: "{data} Notifications" # {data} return number of unread notification
+      token: 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 # GitHub Personal access tokens (classic) https://github.com/settings/tokens
+      max_notification: 20 # Max number of notification displaying in menu max: 50
+      notification_dot:
+        enabled: True
+        corner: "bottom_left" # Can be "top_left", "top_right", "bottom_left", "bottom_right"
+        color: "red" # Can be hex color or string
+        margin: [ 1, 1 ] # x and y margin for the dot
+      only_unread: false # Show only unread or all notifications; 
+      max_field_size: 54 # Max characters in title before truncation.
+      update_interval: 300 # Check for new notification in seconds
+      menu:
+        blur: True # Enable blur effect for the menu
+        round_corners: True # Enable round corners for the menu (this option is not supported on Windows 10)
+        round_corners_type: "small" # Set the type of round corners for the menu (normal, small) (this option is not supported on Windows 10)
+        border_color: "System" # Set the border color for the menu (this option is not supported on Windows 10)
+        alignment: "right"
+        direction: "down"
+      label_shadow:
+        enabled: True
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]

@@ -1,8 +1,8 @@
 /* THEME FONT & COLOR VARIABLES */
 :root {
     --accent: #fcf75e; /*Weather, Calendar, Notifications & Updates Icons*/
-	--menu_bg: rgba(30, 30, 46, 0.6);
-	--menu_bg2: rgba(30, 30, 46, 0.4);
+	--menu_bg: rgba(17, 17, 17, 0.6);
+	--menu_bg2: rgba(17, 17, 17, 0.4);
     --update: #673147;
 	--update_border: #74c7ec;
     --red: #FF534D; /*Power Button, Net Disconnect*/
@@ -14,11 +14,11 @@
 	--subtext1: #ded6f4;
 	--subtext2: #afb5cc;
     --bg: #111111;
-    --bg_alpha: rgba(30, 30, 46, 0.85);
+    --bg_alpha: rgba(17, 17, 17, 0.85);
 	--hourlyweather_bg:rgba(21, 93, 199, 0.85);
 	--hover: rgba(255, 255, 255, 0.05);
-	--font: 'Roboto';
-	--font-size: 12px; /* Applies to most of the theme */
+	--font: 'Bahnschrift SemiCondensed'; /* 'Roboto' */
+	--font-size: 13px; /* Applies to most of the theme */
 }
 
 /* MAIN */
@@ -893,6 +893,79 @@
 }
 .cava-widget .widget-container {
 	background-color: transparent;
+}
+
+/* GITHUB */
+
+.github-widget .widget-container .label {
+	color: var(--accent);
+	font-family: var(--font);
+	font-size: var(--font-size);
+}
+.github-widget .icon {
+	color: var(--accent);
+}
+
+/* GITHUB MENU */
+
+.github-menu    {
+    background-color:  var(--menu_bg);
+    max-height: 500px;
+    min-height: 500px;
+    min-width: 420px;
+}
+.github-menu .header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+    font-family: var(--font);
+    padding: 8px;
+    color: var(--accent);
+    background-color: var(--menu_bg2);
+}
+.github-menu .footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    padding: 4px 8px 6px 8px;
+    font-family: var(--font);
+    color: var(--subtext);
+    background-color: var(--menu_bg2);
+}
+.github-menu .contents {
+    background-color: transparent;
+}
+.github-menu .contents .item {
+    min-height: 40px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.github-menu .contents .item:hover {
+    background-color: var(--hover);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.github-menu .contents .item .title,
+.github-menu .contents .item .description {
+    color: var(--text);
+    font-family: var(--font);
+}
+.github-menu .contents .item .title {
+    font-size: 13px;
+}
+.github-menu .contents .item .description {
+    font-size: 13px;
+}
+.github-menu .contents .item.new .title,
+.github-menu .contents .item.new .description {
+    color: var(--accent);
+}
+.github-menu .contents .item .icon {
+    font-size: 16px;
+    padding-right: 0;
+    padding-left: 8px;
+    padding-right: 4px;
+    color: var(--text);
+}
+.github-menu .contents .item.new .icon {
+    color: var(--text);
 }
 
 /* CPU & MEMORY GROUP */

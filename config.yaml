@@ -91,7 +91,7 @@ widgets:
     options:
       label: "<span>{icon}</span> {temp} - {location}"
       label_alt: "{location}: {conditions}, Min {min_temp}, Max {max_temp}, Humidity {humidity}"
-      api_key: "67c31ff99a9a42f8844114051252507" # Get your free API key from https://www.weatherapi.com/
+      api_key: "<INSERT YOUR OWN KEY>" # Get your free API key from https://www.weatherapi.com/
       update_interval: 600
       hide_decimal: true
       location: "Australia, Adelaide" # You can use "USA Los Angeles 90006" {COUNTRY CITY ZIP_CODE}, or just city.
@@ -433,7 +433,7 @@ widgets:
     options:
       label: "<span>\ueba1</span>"
       label_alt: "{data} Notifications" # {data} return number of unread notification
-      token: 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 # GitHub Personal access tokens (classic) https://github.com/settings/tokens
+      token: <INSERT YOUR OWN KEY> # GitHub Personal access tokens (classic) https://github.com/settings/tokens
       max_notification: 20 # Max number of notification displaying in menu max: 50
       notification_dot:
         enabled: True

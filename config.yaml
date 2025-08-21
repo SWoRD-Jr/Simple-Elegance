@@ -86,15 +86,20 @@ widgets:
         system: "System Settings"
         about: "About This PC"
         task_manager: "Task Manager"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   weather:
     type: "yasb.weather.WeatherWidget"
     options:
       label: "<span>{icon}</span> {temp} - {location}"
       label_alt: "{location}: {conditions}, Min {min_temp}, Max {max_temp}, Humidity {humidity}"
-      api_key: "INSERT_YOUR_OWN_KEY" # Get your free API key from https://www.weatherapi.com/
-      update_interval: 600
+      api_key: "YOUR_API_KEY" # Get your free API key from https://www.weatherapi.com/
+      update_interval: 300
       hide_decimal: true
-      location: "Australia, Adelaide" # You can use "USA Los Angeles 90006" {COUNTRY CITY ZIP_CODE}, or just city.
+      location: "Adelaide" # You can use "USA Los Angeles 90006" {COUNTRY CITY ZIP_CODE}, or just city.
       units: "metric" # Can be 'metric' or 'imperial'
       callbacks:
         on_left: "toggle_card"
@@ -119,6 +124,11 @@ widgets:
         direction: "down"
         offset_top: 6
         icon_size: 48
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -155,29 +165,29 @@ widgets:
         play: "\uf04b"
         pause: "\uf04c"
       media_menu:
-       blur: true
-       round_corners: true
-       round_corners_type: "small"
-       border_color: "system"
-       alignment: "right"
-       direction: "down"
-       offset_top: 6
-       offset_left: 0
-       thumbnail_corner_radius: 4
-       thumbnail_size: 80
-       max_title_size: 80
-       max_artist_size: 20
-       show_source: true
+        blur: true
+        round_corners: true
+        round_corners_type: "small"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        thumbnail_corner_radius: 4
+        thumbnail_size: 80
+        max_title_size: 80
+        max_artist_size: 20
+        show_source: true
       media_menu_icons:
-       play: "\uf04b"
-       pause: "\uf04c"
-       prev_track: "\uf048"
-       next_track: "\uf051"
+        play: "\uf04b"
+        pause: "\uf04c"
+        prev_track: "\uf048"
+        next_track: "\uf051"
       label_shadow:
-       enabled: true
-       color: "black"
-       radius: 3
-       offset: [ 1, 1 ]
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
@@ -189,6 +199,11 @@ widgets:
       max_length: 40
       max_length_ellipsis: "..."
       monitor_exclusive: true
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -210,40 +225,55 @@ widgets:
         on_left: "toggle_calendar"
         on_middle: "do_nothing"
         on_right: "toggle_label"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   disk:
     type: "yasb.disk.DiskWidget"
     options:
-        label: "<span>\uf473</span>"
-        label_alt: "<span>\uf473</span>"
-        update_interval: 60
-        group_label:
-          volume_labels: ["C", "D", "E", "F"]
-          show_label_name: false
-          blur: True
-          round_corners: True
-          round_corners_type: "small"
-          border_color: "System"
-          alignment: "right"
-          direction: "down"
-        callbacks:
-          on_left: "toggle_group"
-          on_middle: "toggle_label"
-          on_right: "exec explorer" # Open disk C in file explorer
+      label: "<span>\uf473</span>"
+      label_alt: "<span>\uf473</span>"
+      update_interval: 60
+      group_label:
+        volume_labels: ["C", "D", "E", "F"]
+        show_label_name: false
+        blur: True
+        round_corners: True
+        round_corners_type: "small"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+      callbacks:
+        on_left: "toggle_group"
+        on_middle: "toggle_label"
+        on_right: "exec explorer" # Open disk C in file explorer
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   power_menu:
-      type: "yasb.power_menu.PowerMenuWidget"
-      options:
-        label: "\uf011"
-        uptime: True
-        blur: False
-        blur_background: True
-        animation_duration: 250 # Milisecond 
-        button_row: 5 # Number of buttons in row, min 1 max 5
-        buttons:
-          signout: ["\udb80\udf43","Sign out"]
-          shutdown: ["\uf011","Shut Down"]
-          restart: ["\uead2","Restart"]
-          hibernate: ["\uf28e","Hibernate"]
-          cancel: ["\udb81\udf3a","Cancel"]
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 250 # Milisecond 
+      button_row: 5 # Number of buttons in row, min 1 max 5
+      buttons:
+        signout: ["\udb80\udf43","Sign out"]
+        shutdown: ["\uf011","Shut Down"]
+        restart: ["\uead2","Restart"]
+        hibernate: ["\uf28e","Hibernate"]
+        cancel: ["\udb81\udf3a","Cancel"]
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   notifications:
     type: "yasb.notifications.NotificationsWidget"
     options:
@@ -255,6 +285,11 @@ widgets:
         on_left: "toggle_notification"
         on_right: "toggle_label"
         on_middle: "do_nothing" 
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
@@ -279,6 +314,11 @@ widgets:
         left: 0
         bottom: 0
         right: 0
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
@@ -293,7 +333,12 @@ widgets:
         top: 0
         left: 0
         bottom: 0
-        right: 8   
+        right: 8
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]        
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -319,9 +364,9 @@ widgets:
         on_middle: "exec cmd.exe /c start ms-settings:sound"
         on_right: "toggle_mute"
       label_shadow:
-        enabled: true
+        enabled: false
         color: "black"
-        radius: 6
+        radius: 1
         offset: [ 1, 1 ]
   update_check:
     type: "yasb.update_check.UpdateCheckWidget"
@@ -336,6 +381,11 @@ widgets:
         label: "<span>\uf0ab</span>{count}"
         interval: 360
         exclude: []
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
@@ -355,6 +405,11 @@ widgets:
       callbacks:
         on_left: "toggle_menu"
         on_right: "exec cmd.exe /c start ms-settings:network"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   microphone:
     type: "yasb.microphone.MicrophoneWidget"
     options:
@@ -376,19 +431,29 @@ widgets:
         direction: "down"
         offset_top: 6
         offset_left: 0
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   wifi:
-      type: "yasb.wifi.WifiWidget"
-      options:
-        label: "\ueb01"
-        label_alt: "{wifi_name} {wifi_strength}%"
-        update_interval: 5000
-        callbacks:
-          on_left: "exec quick_settings"
-          on_middle: "toggle_label"
-          on_right: "exec cmd.exe /c start ms-settings:network"
-        ethernet_label: "\ueb01"
-        ethernet_label_alt: "\ueb01 {ip_addr}"
-        ethernet_icon: "\ueba9"
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "\ueb01"
+      label_alt: "{wifi_name} {wifi_strength}%"
+      update_interval: 5000
+      callbacks:
+        on_left: "exec quick_settings"
+        on_middle: "toggle_label"
+        on_right: "exec cmd.exe /c start ms-settings:network"
+      ethernet_label: "\ueb01"
+      ethernet_label_alt: "\ueb01 {ip_addr}"
+      ethernet_icon: "\ueba9"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [ 1, 1 ]
   cava:
     type: "yasb.cava.CavaWidget"
     options:
@@ -433,12 +498,12 @@ widgets:
     options:
       label: "<span>\ueba1</span>"
       label_alt: "{data} Notifications" # {data} return number of unread notification
-      token: INSERT_YOUR_OWN_KEY # GitHub Personal access tokens (classic) https://github.com/settings/tokens
+      token: ghp_YOUR_OWN_TOKEN # GitHub Personal access tokens (classic) https://github.com/settings/tokens
       max_notification: 20 # Max number of notification displaying in menu max: 50
       notification_dot:
         enabled: True
-        corner: "bottom_left" # Can be "top_left", "top_right", "bottom_left", "bottom_right"
-        color: "red" # Can be hex color or string
+        corner: "bottom_right" # Can be "top_left", "top_right", "bottom_left", "bottom_right"
+        color: "#FF534D" # Can be hex color or string - Set same as red variable in stylesheet
         margin: [ 1, 1 ] # x and y margin for the dot
       only_unread: false # Show only unread or all notifications; 
       max_field_size: 54 # Max characters in title before truncation.
@@ -451,7 +516,7 @@ widgets:
         alignment: "right"
         direction: "down"
       label_shadow:
-        enabled: True
+        enabled: false
         color: "black"
-        radius: 3
+        radius: 1
         offset: [ 1, 1 ]

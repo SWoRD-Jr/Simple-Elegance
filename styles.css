@@ -903,7 +903,7 @@
 	font-size: var(--font-size);
 }
 .github-widget .icon {
-	color: var(--accent);
+	color: var(--text);
 }
 
 /* GITHUB MENU */

@@ -1,15 +1,15 @@
 /* THEME FONT & COLOR VARIABLES */
 :root {
-    --accent: #fcf75e; /*Weather, Calendar, Notifications & Updates Icons*/
+    --accent: #FDFF3B; /*Weather, Calendar, Notifications & Updates Icons*/
 	--menu_bg: rgba(11, 11, 11, 0.4);
 	--menu_bg2: rgba(11, 11, 11, 0.2);
     --update: #673147;
 	--update_border: #74c7ec;
-    --red: #FF534D; /*Power Button, Net Disconnect*/
+    --red: #d7453d; /*Power Button, Net Disconnect*/
     --media: #ff9f00;
     --traffic: #4cbb17;
-    --disks: #2196F3;
-    --text: #cdd6f4;
+    --disks: #2196F3; /* Unused at the moment, accent is used instead */
+    --text: #f2f2f2;
     --subtext: #a6adc8;
 	--subtext1: #ded6f4;
 	--subtext2: #afb5cc;
@@ -77,85 +77,11 @@
 .home-menu .menu-item:hover {
     background-color: var(--hover);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: var(--accent);
 }
 .home-menu .separator {
     max-height: 1px;
     background-color:rgba(128, 130, 158, 0.3);
-}
-
-/* WEATHER */
-
-.weather-widget {
-    padding: 0;
-    padding-left: -5
-}
-.weather-widget .icon {
-    color: var(--accent);
-	font-size: 14px;
-    padding: 6px;
-}
-.weather-widget .label {
-    font-size: var(--font-size);
-    font-family: var(--font);
-	color: var(--accent);
-}
-
-/* WEATHER DROPDOWN */
-
-.weather-card {
-    background-color: var(--menu_bg);
-}
-.weather-card-today {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    background-color:  var(--menu_bg2);
-}
-.weather-card-today .label {
-    font-size: 13px;
-	font-family: var(--font);
-}
-.weather-card-today .label.location {
-	font-family: var(--font);
-    font-size: 22px;
-	color: var(--accent);
-}
-.weather-card-today .label.alert {
-	font-family: var(--font);
-    font-size: var(--font-size);
-    background-color: var(--menu_bg2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(196, 181, 162, 0.85);
-    border-radius: 4px;
-    padding: 5px 0;
-}
-.weather-card-day {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    background-color:  var(--menu_bg2);
-}
-.weather-card-day.active {
-    background-color: var(--menu_bg2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.weather-card-day:hover {
-    background-color: var(--hover);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.weather-card-day .label {
-    font-size: 13px;
-	font-family: var(--font);
-}
-.weather-card .hourly-container {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: var(--hourlyweather_bg);
-    border-radius: 4px;
-    min-height: 150px;
-}
-.weather-card .hourly-data {
-    font-family: var(--font);
-    background-color: #FAE93F; /* Curve color */
-    font-size: 12px;
 }
 
 /* ACTIVE WINDOW */
@@ -168,236 +94,12 @@
     padding-right: 6px;
     border: none;
 }
-
-/*CLOCK WIDGET*/
-
-.clock-widget .label {
-    font-size: var(--font-size);
-    font-family: var(--font);
-}
-
-/*CALENDAR DROPDOWN*/
-
-.calendar {
-    background-color: var(--menu_bg);
-}
-.calendar .calendar-table{
-	border-radius: 4px;
-	background-color: var(--menu_bg2);
-}
-.calendar .calendar-table,
-.calendar .calendar-table::item {
-    color: var(--subtext);
-    font-family: var(--font);
-	font-size: var(--font-size);
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;  
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.calendar .calendar-table::item:selected {
+.active-window-widget .label:hover {
     color: var(--accent);
-}
-.calendar .day-label {
-    margin-top: 20px;
-}
-.calendar .day-label,
-.calendar .month-label,
-.calendar .date-label {
-    font-family: var(--font);
-    font-size: 14px;
-    color: #fff;
-    font-weight: 600;
-    min-width: 180px;
-    max-width: 180px;
-}
-.calendar .month-label {
-    font-weight: 700;
-}
-.calendar .date-label {
-    font-size: 80px;
-    font-weight: 900;
-    color: rgb(255, 255, 255);
-    margin-top: -5px;
-	color: var(--accent);
-}
-.calendar .week-label,
-.calendar .holiday-label {
-    font-family: var(--font);
-    font-size: 12px;
-    color: var(--media);
-    font-weight: 700;
-    min-width: 180px;
-    max-width: 180px;
-}
-
-/* DISK WIDGET */
-
-.disk-widget {
-    padding: 0 0px 0 0px;
-}
-.disk-widget .icon {
-    padding: 0px;
-	color: var(--text);
-	font-size: 13px;
-}
-
-/* DISK DROPDOWN */
-
-.disk-group {
-    background-color: var(--menu_bg);    
-}
-.disk-group-row {
-    min-width: 220px;
-    max-width: 220px;
-    max-height: 40px;
-    margin: 0;
-    padding: 0;
-    border-radius: 6px;
-    border: 1px solid rgba(128, 128, 128, 0);
-}
-.disk-group-row:hover {
-    background-color: var(--hover);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.disk-group-label-bar{
-    max-height: 8px;
-    border:0px solid rgba(128, 128, 128, 0);
-    background-color: rgba(148, 226, 213, 0.3);
-    border-radius: 4px;
-}
-.disk-group-label-bar::chunk{
-    background-color: var(--disks);
-    border-radius: 4px;
-}
-.disk-group-label {
-    font-size: var(--font-size);
-}
-.disk-group-label-size {
-    font-size: var(--font-size);
-    color: rgba(205, 214, 244, 0.5);
-}
-
-/* AUDIO & MIC WIDGET */
-
-.volume-widget {
-    margin-left: 0;
-    padding: 0;
-}
-.volume-widget .icon {
-    padding: 0 5px;
-    color: white;
-	font-size: 13px;
-}
-.volume-widget .label {
-    font-size: var(--font-size);
-    font-family: var(--font);
-}
-
-.microphone-widget .icon {
-    color: white;
-	font-size: 12px;
-}
-
-/* AUDIO & MIC DROPDOWN */
-
-.audio-menu {
-    background-color: var(--menu_bg);
-}
-.microphone-menu{
-	background-color: var(--menu_bg);
-}	
-.audio-container .device {
-    font-family: var(--font);
-    background-color: transparent;
-    border: none;
-    padding:6px 8px 6px 4px;
-    margin: 2px 0;
-    font-size: var(--font-size);
-    border-radius: 4px;
-}
-.audio-container .device.selected {
-    background-color: rgba(255, 255, 255, 0.085);
-}
-.audio-container .device:hover {
-    background-color: var(--hover);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* POWER */
-
-.power-menu-widget {
-    padding-left: 6px;
-}
-.power-menu-widget .label {
-	color: var(--red);
-    font-size: 16px;
-}
-
-/* POWER MENU */
-
-.uptime {
-	font-size: 16px;
-	margin-bottom: 10px;
-	color: var(--accent);
-	font-weight: 600;
-	font-family: var(--font);
-}
-.power-menu-popup .button {
-	padding: 0;
-	width: 160px;
-	height: 240px;
-	border-radius: 6px;
-	background-color: var(--bg_alpha);
-	font-family: var(--font);
-	color: white;
-	border: 4px solid rgba(255, 255, 255, 0);
-}
-.power-menu-popup .button.hover {
-	background-color: var(--hover);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.power-menu-popup .button .label {
-	margin-bottom: 8px;
-	font-size: 16px;
-	font-weight: 600;
-	color: rgba(255, 255, 255, 0.6);
-	font-family: var(--font);
-}
-.power-menu-popup .button .icon {
-	font-size: 64px;
-	padding-top: 54px;
-	color: rgba(255, 255, 255, 0.25);
-}
-.power-menu-popup .button.cancel .icon {
-	color: rgba(243, 139, 168, 0.55);
-}
-.power-menu-popup .button.cancel .label {
-	color: rgba(243, 139, 168, 0.95);
-	color: rgba(243, 139, 168, 0.95);
-}
-
-/*NOTIFICATIONS*/
-
-.notification-widget .icon {
-	font-size: 13px;
-	color: var(--accent);
-}
-.notification-widget .label {
-	color: var(--text);
-	background-color: var(--red);
-	border-radius: 6px;
-    padding: 1px 4px;
-    font: 8px Verdana;
-	font-weight: 800;
-	margin: 5px 0 8px 0;
-	position: absolute;
-	top: 0;
-	right: 0;
 }
 
 /* MEDIA */
+
 .media-widget .widget-container
 {
     background-color: transparent;
@@ -416,6 +118,9 @@
 	color: var(--media);
     padding: 0px;
     padding-left: 12px;
+}
+.media-widget .label:hover {
+    color: var(--text);
 }
 .media-widget .btn {
     color: var(--media);
@@ -522,82 +227,169 @@
     height: 4px;
 }
 
-/* CPU & MEMORY */
+/* CAVA */
 
-.cpu-widget {
-    padding-right: 0;
+.cava-widget {
+    padding: 0;
+    margin: 0;
 }
-.memory-widget {
-    padding-left: 0;
+.cava-widget .widget-container {
+	background-color: transparent;
 }
-.cpu-widget .widget-container {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+
+/*CLOCK WIDGET*/
+
+.clock-widget .label {
+    font-size: var(--font-size);
+    font-family: var(--font);
 }
-.memory-widget .widget-container {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+.clock-widget .label:hover {
+    color: var(--accent);
 }
-.memory-widget .label {
-	font-family: var(--font);
-    min-width: 30px;
-    max-width: 80px;
-	color: var(--text);
+
+/*CALENDAR DROPDOWN*/
+
+.calendar {
+    background-color: var(--menu_bg);
+}
+.calendar .calendar-table{
+	border-radius: 4px;
+	background-color: var(--menu_bg2);
+}
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+    color: var(--subtext);
+    font-family: var(--font);
 	font-size: var(--font-size);
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;  
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.cpu-widget .label {
-	font-family: var(--font);
-    min-width: 30px;
-    max-width: 80px;
-	color: var(--text);
-	font-size: var(--font-size);
-	padding: 0;
+.calendar .calendar-table::item:selected {
+    color: var(--accent);
+	background-color: var(--hover);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.cpu-widget .icon {
-    color: var(--text);
-    margin-right: 4px;
-	font-size: 13px;
+.calendar .calendar-table::item:hover {
+    color: var(--accent);
+	background-color: var(--hover);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.memory-widget .icon {
-    color: var(--text);
-    margin-right: 4px;
-	font-size: 13px;
+.calendar .day-label {
+    margin-top: 20px;
 }
-
-/* UPDATES */
-
-.update-check-widget {
-    padding: 0 0px 0 0px;
-}
-.update-check-widget .icon {
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label {
+    font-family: var(--font);
     font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    min-width: 180px;
+    max-width: 180px;
+}
+.calendar .month-label {
+    font-weight: 700;
+}
+.calendar .date-label {
+    font-size: 80px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    margin-top: -5px;
 	color: var(--accent);
 }
-.update-check-widget .widget-container.winget,
-.update-check-widget .widget-container.windows {
-    background-color: var(--menu_bg);
-    margin: 1px 0px 2px 0px;
-    border-radius: 4px;
-    border: 0px solid var(--update_border);
+.calendar .week-label,
+.calendar .holiday-label {
+    font-family: var(--font);
+    font-size: 12px;
+    color: var(--media);
+    font-weight: 700;
+    min-width: 180px;
+    max-width: 180px;
 }
-.update-check-widget .widget-container.winget .icon,
-.update-check-widget .widget-container.windows .icon {
+/* WEATHER */
+
+.weather-widget {
+    padding: 0;
+    padding-left: -5
+}
+.weather-widget .icon {
     color: var(--accent);
-    margin: 0 2px 0 6px;
+	font-size: 14px;
+    padding: 6px;
 }
-.update-check-widget .widget-container.winget .label,
-.update-check-widget .widget-container.windows .label {
-	color: var(--text);
-	background-color: var(--red);
-	border-radius: 6px;
-    padding: 1px 4px;
-    font: 8px Verdana;
-	font-weight: 800;
-	margin: 5px 0 8px 0;
-	position: absolute;
-	top: 0;
-	right: 0;
+.weather-widget .icon:hover {
+    color: var(--text);
+}
+.weather-widget .label {
+    font-size: var(--font-size);
+    font-family: var(--font);
+	color: var(--accent);
+}
+.weather-widget .label:hover {
+    color: var(--text);
+}
+
+/* WEATHER DROPDOWN */
+
+.weather-card {
+    background-color: var(--menu_bg);
+}
+.weather-card-today {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background-color:  var(--menu_bg2);
+}
+.weather-card-today .label {
+    font-size: 13px;
+	font-family: var(--font);
+}
+.weather-card-today .label.location {
+	font-family: var(--font);
+    font-size: 22px;
+	color: var(--accent);
+}
+.weather-card-today .label.alert {
+	font-family: var(--font);
+    font-size: var(--font-size);
+    background-color: var(--menu_bg2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(196, 181, 162, 0.85);
+    border-radius: 4px;
+    padding: 5px 0;
+}
+.weather-card-day {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background-color:  var(--menu_bg2);
+}
+.weather-card-day.active {
+    background-color: var(--hover);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.weather-card-day:hover {
+    background-color: var(--hover);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.weather-card-day .label {
+    font-size: 13px;
+	font-family: var(--font);
+}
+.weather-card-day .label:hover {
+	color: var(--accent);
+}
+.weather-card .hourly-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: var(--hourlyweather_bg);
+    border-radius: 4px;
+    min-height: 150px;
+}
+.weather-card .hourly-data {
+    font-family: var(--font);
+    background-color: #FAE93F; /* Curve color */
+    font-size: 12px;
 }
 
 /* TRAFFIC */
@@ -617,6 +409,9 @@
 	min-width: 100px;
 	max-width: 190px;
 }
+.traffic-widget .label:hover {
+    color: var(--text);
+}
 
 /* TRAFFIC DROPDOWN */
 
@@ -633,7 +428,7 @@
     font-size: 14px;
     font-weight: 600;
     font-family: var(--font);
-    color: var(--accent);
+    color: var(--traffic);
 }
 .traffic-menu .header .reset-button {
     font-size: var(--font-size);
@@ -645,7 +440,7 @@
     border: none;
 }
 .traffic-menu .reset-button:hover {
-    color: #ffffff;
+    color: var(--accent);
     background-color: var(--hover);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -745,7 +540,7 @@
     color: var(--red);
 }
 
-/* NETWORK */
+/* WIFI & NETWORK */
 
 .wifi-widget .icon{
 	font-size: 13px;
@@ -756,6 +551,12 @@
 	font-size: 15px;
 	font-align: right;
 	color: var(--text);
+}
+.wifi-widget .icon:hover {
+    color: var(--accent);
+}
+.wifi-widget .label:hover {
+    color: var(--accent);
 }
 
 /* NETWORK DROPDOWN */
@@ -806,12 +607,14 @@
     background-color: var(--hover);
 	border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
+	color: var(--accent);
 }
 .wifi-menu .wifi-item[active=true] {
     background-color: rgba(255, 255, 255, 0.15);
     font-size: var(--font-size);
     border-radius: 4px;
     min-height: 80px;
+	color: var(--accent);
 }
 .wifi-menu .wifi-item .icon {
     font-family: 'Segoe Fluent Icons';
@@ -849,6 +652,7 @@
 .wifi-menu .wifi-item .connect:hover {
     background-color: var(--hover);
 	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: var(--accent);
 }
 .wifi-menu .wifi-item .connect:pressed {
     background-color: rgba(255, 255, 255, 0.3);
@@ -883,16 +687,7 @@
     background-color: var(--hover);
 	border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-}
-
-/* CAVA */
-
-.cava-widget {
-    padding: 0;
-    margin: 0;
-}
-.cava-widget .widget-container {
-	background-color: transparent;
+	color: var(--accent);
 }
 
 /* GITHUB */
@@ -904,6 +699,9 @@
 }
 .github-widget .icon {
 	color: var(--text);
+}
+.github-widget .icon:hover {
+    color: var(--accent);
 }
 
 /* GITHUB MENU */
@@ -946,12 +744,11 @@
 .github-menu .contents .item .description {
     color: var(--text);
     font-family: var(--font);
+	font-size: 13px;
 }
-.github-menu .contents .item .title {
-    font-size: 13px;
-}
-.github-menu .contents .item .description {
-    font-size: 13px;
+.github-menu .contents .item .title:hover,
+.github-menu .contents .item .description:hover {
+    color: var(--accent);
 }
 .github-menu .contents .item.new .title,
 .github-menu .contents .item.new .description {
@@ -966,6 +763,291 @@
 }
 .github-menu .contents .item.new .icon {
     color: var(--text);
+}
+
+/* CPU & MEMORY */
+
+.cpu-widget {
+    padding-right: 0;
+}
+.memory-widget {
+    padding-left: 0;
+}
+.cpu-widget .widget-container {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.memory-widget .widget-container {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.memory-widget .label {
+	font-family: var(--font);
+    min-width: 30px;
+    max-width: 80px;
+	color: var(--text);
+	font-size: var(--font-size);
+	padding: 0;
+}
+.cpu-widget .label {
+	font-family: var(--font);
+    min-width: 30px;
+    max-width: 80px;
+	color: var(--text);
+	font-size: var(--font-size);
+	padding: 0;
+}
+.cpu-widget .icon {
+    color: var(--text);
+    margin-right: 4px;
+	font-size: 13px;
+}
+.memory-widget .icon {
+    color: var(--text);
+    margin-right: 4px;
+	font-size: 13px;
+}
+.cpu-widget .icon:hover {
+    color: var(--accent);
+}
+.cpu-widget .label:hover {
+    color: var(--accent);
+}
+.memory-widget .icon:hover {
+    color: var(--accent);
+}
+.memory-widget .label:hover {
+    color: var(--accent);
+}
+
+/* DISK WIDGET */
+
+.disk-widget {
+    padding: 0 0px 0 0px;
+}
+.disk-widget .icon {
+    padding: 0px;
+	color: var(--text);
+	font-size: 13px;
+}
+.disk-widget .icon:hover {
+    color: var(--accent);
+}
+
+/* DISK DROPDOWN */
+
+.disk-group {
+    background-color: var(--menu_bg);    
+}
+.disk-group-row {
+    min-width: 220px;
+    max-width: 220px;
+    max-height: 40px;
+    margin: 0;
+    padding: 0;
+    border-radius: 6px;
+    border: 1px solid rgba(128, 128, 128, 0);
+}
+.disk-group-row:hover {
+    background-color: var(--hover);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.disk-group-label-bar{
+    max-height: 8px;
+    border:0px solid rgba(128, 128, 128, 0);
+    background-color: rgba(148, 226, 213, 0.3);
+    border-radius: 4px;
+}
+.disk-group-label-bar::chunk{
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+.disk-group-label-bar::chunk:hover{
+    background-color: var(--text);
+}
+.disk-group-label {
+    font-size: var(--font-size);
+}
+.disk-group-label-size {
+    font-size: var(--font-size);
+    color: rgba(205, 214, 244, 0.5);
+}
+.disk-group-label:hover,
+.disk-group-label-size:hover {
+    color: var(--accent);
+}
+
+/* AUDIO & MIC WIDGET */
+
+.volume-widget {
+    margin-left: 0;
+    padding: 0;
+}
+.volume-widget .icon {
+    padding: 0 5px;
+    color: var(--text);
+	font-size: 13px;
+}
+.volume-widget .label {
+    font-size: var(--font-size);
+    font-family: var(--font);
+	color: var(--text);
+}
+
+.microphone-widget .icon {
+    color: var(--text);
+	font-size: 13px;
+}
+.volume-widget .icon:hover {
+    color: var(--accent);
+}
+.volume-widget .label:hover {
+    color: var(--accent);
+}
+.microphone-widget .icon:hover {
+    color: var(--accent);
+}
+
+/* AUDIO & MIC DROPDOWN */
+
+.audio-menu {
+    background-color: var(--menu_bg);
+}
+.microphone-menu{
+	background-color: var(--menu_bg);
+}	
+.audio-container .device {
+    font-family: var(--font);
+    background-color: transparent;
+    border: none;
+    padding:6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: var(--font-size);
+    border-radius: 4px;
+}
+.audio-container .device.selected {
+    background-color: rgba(255, 255, 255, 0.085);
+	color: var(--accent)
+}
+.audio-container .device:hover {
+    background-color: var(--hover);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: var(--accent)
+}
+
+/*NOTIFICATIONS*/
+
+.notification-widget .icon {
+	font-size: 13px;
+	color: var(--accent);
+}
+.notification-widget .label {
+	color: var(--text);
+	background-color: var(--red);
+	border-radius: 6px;
+    padding: 0px 3px 0px 3px;
+    font: 8px Verdana;
+	font-weight: 800;
+	margin: 4px 0px 10px 0px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* UPDATES */
+
+.update-check-widget {
+    padding: 0 0px 0 0px;
+}
+.update-check-widget .icon {
+    font-size: 14px;
+	color: var(--accent);
+}
+.update-check-widget .widget-container.winget,
+.update-check-widget .widget-container.windows {
+    background-color: var(--menu_bg);
+    margin: 1px 0px 2px 0px;
+    border-radius: 4px;
+    border: 0px solid var(--update_border);
+}
+.update-check-widget .widget-container.winget .icon,
+.update-check-widget .widget-container.windows .icon {
+    color: var(--accent);
+    margin: 0 2px 0 6px;
+}
+.update-check-widget .widget-container.winget .label,
+.update-check-widget .widget-container.windows .label {
+	color: var(--text);
+	background-color: var(--red);
+	border-radius: 6px;
+    padding: 0px 3px 0px 3px;
+    font: 8px Verdana;
+	font-weight: 800;
+	margin: 4px 0px 10px 0px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* POWER */
+
+.power-menu-widget {
+    padding-left: 6px;
+}
+.power-menu-widget .label {
+	color: var(--red);
+    font-size: 16px;
+}
+.power-menu-widget .label:hover {
+    color: var(--text);
+}
+
+/* POWER MENU */
+
+.uptime {
+	font-size: 16px;
+	margin-bottom: 10px;
+	color: var(--accent);
+	font-weight: 600;
+	font-family: var(--font);
+}
+.power-menu-popup .button {
+	padding: 0;
+	width: 160px;
+	height: 240px;
+	border-radius: 6px;
+	background-color: var(--bg_alpha);
+	font-family: var(--font);
+	color: white;
+	border: 4px solid rgba(255, 255, 255, 0);
+}
+.power-menu-popup .button.hover {
+	background-color: var(--hover);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.power-menu-popup .button .label {
+	margin-bottom: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--subtext2);
+	font-family: var(--font);
+}
+.power-menu-popup .button .icon {
+	font-size: 64px;
+	padding-top: 54px;
+	color: var(--subtext2);
+}
+.power-menu-popup .button .icon:hover,
+.power-menu-popup .button .label:hover {
+	color: var(--accent);
+}
+.power-menu-popup .button.cancel .icon,
+.power-menu-popup .button.cancel .label {
+	color: var(--red);
+}
+.power-menu-popup .button.cancel .icon:hover,
+.power-menu-popup .button.cancel .label:hover {
+	color: var(--text);
 }
 
 /* CPU & MEMORY GROUP */

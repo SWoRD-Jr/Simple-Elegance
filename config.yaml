@@ -45,9 +45,7 @@ bars:
           "traffic",
           #"wifi",
           "github",
-          "cpu",
-          "memory",
-          "disk",
+          "sysinfo_widgets",
           "volume",
           "microphone",
           "notifications",
@@ -515,15 +513,9 @@ widgets:
     options:
       class_name: "sysinfo-grouped-widgets"
       widgets: [
-        "traffic",
-        "wifi",
         "cpu",
         "memory",
         "disk",
-        "volume",
-        "microphone",
-        "notifications",
-        "update_check",
       ]
       container_padding:
         top: 0

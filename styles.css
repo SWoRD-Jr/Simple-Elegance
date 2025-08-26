@@ -1,24 +1,22 @@
 /* THEME FONT & COLOR VARIABLES */
 :root {
     --accent: #FDFF3B; /*Weather, Calendar, Notifications & Updates Icons*/
+    --bg: #0B0B0B;
+    --bg_alpha: rgba(11, 11, 11, 0.6);	
 	--menu_bg: rgba(11, 11, 11, 0.4);
 	--menu_bg2: rgba(11, 11, 11, 0.2);
-    --update: #673147;
-	--update_border: #74c7ec;
-    --red: #d7453d; /*Power Button, Net Disconnect*/
-    --media: #ff9f00;
+    --red: #d7453d; /* Power Button, Net Disconnect, notifications & update counters */
+    --media: #ff9f00; 
     --traffic: #4cbb17;
-    --disks: #2196F3; /* Unused at the moment, accent is used instead */
+    --disks: #2196F3; /* <-- Light Blue. Unused at the moment, accent is used instead */
     --text: #f2f2f2;
     --subtext: #a6adc8;
 	--subtext1: #ded6f4;
 	--subtext2: #afb5cc;
-    --bg: #0B0B0B;
-    --bg_alpha: rgba(11, 11, 11, 0.6);
 	--hourlyweather_bg:rgba(21, 93, 199, 0.4);
 	--hover: rgba(255, 255, 255, 0.05);
-	--font: 'Bahnschrift SemiCondensed'; /* 'Roboto' */
-	--font-size: 13px; /* Applies to most of the theme */
+	--font: 'Bahnschrift SemiCondensed'; /* 'Roboto' will also look good */
+	--font-size: 13px; /* Applies to most of the theme (menus have several sizes) */
 }
 
 /* MAIN */
@@ -944,7 +942,7 @@
 .notification-widget .label {
 	color: var(--text);
 	background-color: var(--red);
-	border-radius: 6px;
+	border-radius: 4px;
     padding: 0px 3px 0px 3px;
     font: 8px Verdana;
 	font-weight: 800;
@@ -965,10 +963,8 @@
 }
 .update-check-widget .widget-container.winget,
 .update-check-widget .widget-container.windows {
-    background-color: var(--menu_bg);
     margin: 1px 0px 2px 0px;
     border-radius: 4px;
-    border: 0px solid var(--update_border);
 }
 .update-check-widget .widget-container.winget .icon,
 .update-check-widget .widget-container.windows .icon {
@@ -979,7 +975,7 @@
 .update-check-widget .widget-container.windows .label {
 	color: var(--text);
 	background-color: var(--red);
-	border-radius: 6px;
+	border-radius: 4px;
     padding: 0px 3px 0px 3px;
     font: 8px Verdana;
 	font-weight: 800;

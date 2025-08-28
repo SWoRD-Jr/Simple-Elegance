@@ -946,7 +946,7 @@
     padding: 0px 3px 0px 3px;
     font: 8px Verdana;
 	font-weight: 800;
-	margin: 4px 0px 10px 0px;
+	margin: 5px 0px 10px 0px;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -963,8 +963,8 @@
 }
 .update-check-widget .widget-container.winget,
 .update-check-widget .widget-container.windows {
-    margin: 1px 0px 2px 0px;
-    border-radius: 4px;
+    /*margin: 1px 0px 2px 0px;
+    border-radius: 4px;*/
 }
 .update-check-widget .widget-container.winget .icon,
 .update-check-widget .widget-container.windows .icon {
@@ -979,7 +979,7 @@
     padding: 0px 3px 0px 3px;
     font: 8px Verdana;
 	font-weight: 800;
-	margin: 4px 0px 10px 0px;
+	margin: 5px 0px 10px 0px;
 	position: absolute;
 	top: 0;
 	right: 0;

@@ -477,7 +477,7 @@ widgets:
         enabled: true
         label: "<span>\uf0ab</span>{count}"
         interval: 60
-        exclude: [Discord]
+        exclude: []
       windows_update:
         enabled: false
         label: "<span>\uf0ab</span>{count}"

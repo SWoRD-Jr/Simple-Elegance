@@ -233,6 +233,7 @@
 }
 .cava-widget .widget-container {
 	background-color: transparent;
+	padding: 0 0px 0 4px;
 }
 
 /*CLOCK WIDGET*/

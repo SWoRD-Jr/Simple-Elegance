@@ -70,11 +70,6 @@ widgets:
       round_corners_type: "small"
       border_color: "system"
       distance: 5
-      container_padding: 
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
       alignment: "left"
       direction: "down"
       menu_labels:
@@ -183,11 +178,6 @@ widgets:
       bar_spacing: 1
       bar_width: 2
       hide_empty: true
-      container_padding:
-        top: 0
-        left: 4
-        bottom: 0
-        right: 0
       callbacks:
         on_left: "do_nothing"
         on_middle: "do_nothing"
@@ -345,11 +335,6 @@ widgets:
       histogram_num_columns: 8
       callbacks:
         on_right: "exec cmd /c Taskmgr"
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
       label_shadow:
         enabled: false
         color: "black"
@@ -365,11 +350,6 @@ widgets:
         on_left: "toggle_label"
         on_middle: "do_nothing"
         on_right: "do_nothing"
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 8
       label_shadow:
         enabled: false
         color: "black"
@@ -517,8 +497,3 @@ widgets:
         "memory",
         "disk",
       ]
-      container_padding:
-        top: 0
-        left: 2
-        bottom: 0
-        right: 2

@@ -13,7 +13,8 @@ bars:
       enabled: false
       acrylic: false
       dark_mode: true
-      round_corners: false
+      round_corners: true
+      round_corners_type: "small"
       border_color: None
     window_flags:
       always_on_top: true
@@ -23,10 +24,10 @@ bars:
       width: "100%"
       height: 30
     padding:
-      top: 0 # 4 4 2 4
-      left: 0
-      bottom: 0
-      right: 0
+      top: 2 # 4 4 2 4
+      left: 4
+      bottom: 2
+      right: 4
     widgets:
       left:
         [
@@ -38,7 +39,8 @@ bars:
       center:
         [
           "clock",
-          "weather"
+          "weather",
+          "ai_chat"
         ]
       right:
         [
@@ -48,9 +50,10 @@ bars:
           "sysinfo_widgets",
           "volume",
           "microphone",
+          "wallpapers",
           "notifications",
           "update_check",
-          "power_menu",
+          "power_menu"
         ]
 widgets:
   home:
@@ -61,7 +64,7 @@ widgets:
       - { title: "Home", path: "~" }
       - { title: "Downloads", path: "$env:USERPROFILE/Downloads"}
       - { title: "Documents", path: "$env:USERPROFILE/Documents"}
-      - { title: "Pictures", path: "$env:USERPROFILE/Pictures"}
+      - { title: "Pictures", path: "E:/OneDrive/Pictures"} #Change to your Pictures Folder
       - { title: "Videos", path: "$env:USERPROFILE/Videos"}
       system_menu: true
       power_menu: false
@@ -247,6 +250,40 @@ widgets:
         color: "black"
         radius: 1
         offset: [ 1, 1 ]
+  ai_chat:
+    type: "yasb.ai_chat.AiChatWidget"
+    options:
+      label: "<span>\uf086</span>"
+      chat:
+        blur: true
+        round_corners: true
+        round_corners_type: "small"
+        border_color: "system"
+        alignment: "center"
+        direction: "down"
+        offset_left: 0
+        offset_top: 6
+      icons:
+        send: "\uf1d8"
+        stop: "\uf04d"
+        clear: "\uf1f8"
+        assistant: "\udb81\ude74"
+      notification_dot:
+        enabled: false
+        corner: "top_right"
+        color: "red"
+        margin: [ 0, 2 ]
+      callbacks:
+        on_left: "toggle_chat"
+      providers:
+        - provider: "OpenAI"
+          api_endpoint: "https://api.openai.com/v1"
+          credential: "YOUR_API_KEY" # Get your free key after logging in from https://platform.openai.com/api-keys
+          models:
+          - name: "gpt-4o-mini"
+            label: "Chat GPT4"
+            temperature: 0.3
+            top_p: 0.95
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
@@ -433,6 +470,34 @@ widgets:
         enabled: false
         color: "black"
         radius: 1
+        offset: [ 1, 1 ]
+  wallpapers:
+    type: "yasb.wallpapers.WallpapersWidget"
+    options:
+      label: "<span>\uf00f</span>"
+      image_path: "E:\\OneDrive\\Pictures\\Wallpaper\\Dual" # Change to your wallpapers path
+      change_automatically: false # Automatically change wallpaper
+      update_interval: 60 # If change_automatically is true, update interval in seconds
+      gallery:
+        enabled: true
+        blur: true
+        image_width: 220
+        image_per_page: 8
+        show_buttons: true
+        orientation: "portrait"
+        image_spacing: 8
+        lazy_load: true
+        lazy_load_delay: 80
+        lazy_load_fadein: 400
+        image_corner_radius: 20
+        enable_cache: true
+      run_after: # List of functions to run after wallpaper is updated
+        #- "wal -s -t -e -q -n -i {image}" # Example command to run after wallpaper is updated
+        #- "cmd.exe /c start /min pwsh ./yasb.ps1" # Example command to run after wallpaper is updated
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
         offset: [ 1, 1 ]
   notifications:
     type: "yasb.notifications.NotificationsWidget"

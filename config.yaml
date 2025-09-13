@@ -215,7 +215,7 @@ widgets:
     type: "yasb.weather.WeatherWidget"
     options:
       label: "<span>{icon}</span> {temp}" #  - {location}
-      label_alt: "<span>{icon}</span> {location}: {conditions}, {temp}"# Min {min_temp}, Max {max_temp}, Humidity {humidity}"
+      label_alt: "<span>{icon}</span> {location}: {conditions}, {temp}" # Min {min_temp}, Max {max_temp}, Humidity {humidity}"
       api_key: "YOUR_API_KEY" # Get your free API key from https://www.weatherapi.com/
       update_interval: 300
       hide_decimal: true

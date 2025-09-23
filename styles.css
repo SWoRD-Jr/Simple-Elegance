@@ -1,4 +1,4 @@
-/* THEME FONT & COLOR VARIABLES */
+ /* THEME FONT & COLOR VARIABLES */
 :root {
 	--accent: #FDFF3B; /*Weather, Calendar, Notifications & Updates Icons*/
 	--bg: #0B0B0B;
@@ -1274,7 +1274,7 @@
 /* CPU & MEMORY GROUP */
 
 .sysinfo-grouped-widgets .container {
-	background-color: var(--menu_bg);
+	background-color: none;/* var(--menu_bg); for dark container bg */
 	margin: 2px 0 2px 0;
 	border-radius: 4px;
 }

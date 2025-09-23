@@ -64,7 +64,7 @@ widgets:
       - { title: "Home", path: "~" }
       - { title: "Downloads", path: "$env:USERPROFILE/Downloads"}
       - { title: "Documents", path: "$env:USERPROFILE/Documents"}
-      - { title: "Pictures", path: "E:/OneDrive/Pictures"} #Change to your Pictures Folder
+      - { title: "Pictures", path: "$env:USERPROFILE/Pictures"}
       - { title: "Videos", path: "$env:USERPROFILE/Videos"}
       system_menu: true
       power_menu: false
@@ -475,9 +475,9 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\uf00f</span>"
-      image_path: "E:\\OneDrive\\Pictures\\Wallpaper\\Dual" # Change to your wallpapers path
+      image_path: "E:\\OneDrive\\Pictures\\Wallpaper" # Example path to folder with images
       change_automatically: false # Automatically change wallpaper
-      update_interval: 60 # If change_automatically is true, update interval in seconds
+      update_interval: 1800 # If change_automatically is true, update interval in seconds
       gallery:
         enabled: true
         blur: true
@@ -522,7 +522,7 @@ widgets:
         enabled: true
         label: "<span>\uf0ab</span>{count}"
         interval: 60
-        exclude: []
+        exclude: [Discord]
       windows_update:
         enabled: false
         label: "<span>\uf0ab</span>{count}"

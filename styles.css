@@ -880,6 +880,7 @@
 }
 .github-widget .icon {
 	color: var(--text);
+	font-size: 14px;
 }
 .github-widget .icon:hover {
 	color: var(--accent);

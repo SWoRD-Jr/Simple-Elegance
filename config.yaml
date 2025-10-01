@@ -59,7 +59,7 @@ widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
-      label: "<span>\ue893</span>"
+      label: "<span>\udb85\uddfc</span>"
       menu_list:
       - { title: "Home", path: "~" }
       - { title: "Downloads", path: "$env:USERPROFILE/Downloads"}
@@ -253,7 +253,7 @@ widgets:
   ai_chat:
     type: "yasb.ai_chat.AiChatWidget"
     options:
-      label: "<span>\uf086</span>"
+      label: "<span>\uf0e6</span>"
       chat:
         blur: true
         round_corners: true
@@ -329,7 +329,7 @@ widgets:
   github:
     type: "yasb.github.GithubWidget"
     options:
-      label: "<span>\ueba1</span>"
+      label: "<span>\uf09b</span>"
       label_alt: "{data} Notifications" # {data} return number of unread notification
       token: ghp_YOUR_TOKEN # GitHub Personal access tokens (classic) https://github.com/settings/tokens
       max_notification: 20 # Max number of notification displaying in menu max: 50
@@ -451,8 +451,8 @@ widgets:
       label: "<span>{icon}</span>"
       label_alt: "<span>{icon}</span> {level}"
       icons:
-        normal: ""
-        muted: ""
+        normal: "\uf130"
+        muted: "\uf131"
       callbacks:
         on_left: "toggle_mic_menu"
         on_middle: "exec cmd.exe /c start ms-settings:sound"
